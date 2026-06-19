@@ -4,6 +4,15 @@
 
 🚀 **Live App:** [https://kashish-56.github.io/todoflow-vanilla-js/](https://kashish-56.github.io/todoflow-vanilla-js/)
 
+## 📸 Screenshots
+
+<--------🌙 DARK THEME-------->
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/283004f2-2481-4e5d-8653-c7f07824441d" />
+
+<--------☀️ LIGHT THEME-------->
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/21b88d59-f618-4f91-9599-ef98b4a4d1d3" />
+
+
 ---
 
 ## 📱 What is TodoFlow?
