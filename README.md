@@ -51,8 +51,9 @@ Each task card includes:
 
 ✔️ Complete task  
 ✏️ Edit task  
-🗑️ Delete task  
+🗑️ Delete task 
 
+---
 TASK CARD
 ┌──────────────────────────┐
 │ ✔️ ✏️ 🗑️ │
@@ -100,9 +101,11 @@ Data persists after refresh 🔄
 ```bash
 git clone https://github.com/kashish-56/Todo-App.git
 cd Todo-App
-then open using
+```
+then Open 
+```
 index.html
-
+```
 🔮 Roadmap
 🌙 Dark mode support
 🔍 Task search functionality
@@ -126,3 +129,5 @@ Live Project: https://kashish-56.github.io/Todo-App/
 📢 Share it with others
 
 Built with simplicity. Designed for productivity. ⚡
+
+If you want next level, I can :contentReference[oaicite:0]{index=0} 🚀
