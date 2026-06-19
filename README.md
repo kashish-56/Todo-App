@@ -98,8 +98,8 @@ To get a local copy up and running, follow these simple steps:
    cd Todo-App
    ```
 3. Open the file in your preferred web browser.
-  ```bash
-    index.html
+   ```bash
+   index.html
    ```
 ---
 
