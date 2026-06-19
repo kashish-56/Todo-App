@@ -1,0 +1,548 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+html,body{
+    background:#f8f9ff;
+    color:#0f172a;
+}
+
+
+.app{
+    display:flex;
+    min-height:100vh;
+}
+
+
+.sidebar{
+
+    width:280px;
+    background:#F9F9FD;
+    padding:30px 20px;
+    border-right:1px solid #e5e7eb;
+    position:fixed;
+    top:0;
+    left:0;
+}
+[data-themeSidebar]{
+     background:#242424;
+    color:#f5f5f5;
+
+}
+
+
+.sidebar h2 img{
+    margin-bottom:30px;
+    width:100%;
+    /* border: 1px solid #0f172a; */
+}
+[data-themeSidebarImg]{
+    background-color: #ede9fe;
+    border-radius: 20px;
+}
+.menu{
+
+    display:flex;
+    justify-content:start;
+    align-items:center;
+
+    padding:15px;
+    margin-bottom:10px;
+
+    border-radius:12px;
+    cursor:pointer;
+
+    color:#334155;
+
+}
+.menu i,
+.menu img.logo {
+    width: 25px;         /* Locks the size so they match perfectly */
+    text-align: center;  /* Centers the icon inside the 25px box */
+    margin-right: 15px;  /* Pushes the text a little to the right */
+    font-size: 22px;
+}
+
+/* 2. Let the text stretch, pushing the number span cleanly to the right */
+.menu p {
+    flex: 1;    /* Absorbs all the empty space in the middle */
+    margin: 0;  /* Removes the old jumping margins! */
+}
+
+[data-themeMenu]{
+    color: white;
+}
+
+.menu:hover,
+.menu.active{
+    background:#ede9fe;
+    color:#4f46e5;
+
+}
+
+[data-themeMenu].active,
+[data-themeMenu]:hover{
+    background:#333333;
+    color:#ffffff;
+}
+
+.menu span{
+    color:#334155;
+    margin: 0;
+    background-color: #ede9fe;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: 1px solid black;
+    font-size: 14px;
+}
+[data-themeMenu] span{
+    color: #0d0d0e;
+    background-color: white;
+}
+
+
+.active img{
+    filter: invert(2%) sepia(40%) grayscale(20%) brightness(150%);
+}
+
+hr{
+
+    margin:15px 0;
+    border:0;
+    border-top:1px solid #e5e7eb;
+}
+[data-hr]{
+     border-top:1px solid #757677;
+}
+.image{
+    height:220px;
+    width:190px;
+    margin:0 auto;
+}
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:12px;
+    
+}
+
+.main{
+    /* flex-1 ka mtlb hai remaining space ko le lena */
+    flex:1; 
+    padding:40px;
+    background-color: #FEFFFF;
+    margin-left:280px;
+}
+[data-main]{
+   background:#121212;
+    color:#f5f5f5;
+}
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+.header h1{
+    font-size:32px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+.search-div{
+    display: flex;
+    gap: 30px;
+    /* border: 2px solid white; */
+}
+
+.addBtn{
+    background:#4f46e5;
+    color:white;
+    padding:14px 25px;
+    border-radius:12px;
+    font-size:16px;
+}
+.clear-all{
+    background-color: #ef4444;
+    color: #ffffff; 
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: 30px;
+    border: 1px solid #ef4444;
+}
+.clear-all:hover{
+    background-color: #dc2626;
+}
+.dark{
+    background:#222;
+    color:white;
+    padding:14px 25px;
+    border-radius:12px;
+    font-size:16px;
+}
+.light{
+    background:white;
+    color:#222;
+    padding:14px 25px;
+    border-radius:12px;
+    font-size:16px;
+}
+.input{
+    width:400px;
+    margin:30px 0;
+    padding:15px;
+    border:1px solid #dbe2ea;
+    border-radius:12px;
+    font-size:18px;
+    display: flex;
+}
+.search{
+    border: none;
+    font-size:17px;
+    margin-left: 20px;
+    outline: none;
+}
+[data-search]{
+     background-color: transparent;
+    color: white;
+}
+
+.task-box{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #e5e7eb;
+}
+.row{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 0.6fr;
+    align-items:center;
+    padding:20px;
+    border-bottom:1px solid #e5e7eb;
+    
+}
+[data-task]{
+    background:#242424;
+    color:#f5f5f5;
+    border:1px solid #eff1f363;
+}
+#taskContainer .row{
+    width: 100%;
+}
+
+.heading{
+    font-weight:bold;
+    color:#475569;
+
+}
+[data-heading]{
+    color:#4f46e5;
+}
+
+.task-name{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.checkbox{
+    appearance: none;
+    border: 1px solid gray;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.task-name small{
+    display:block;
+    color:#64748b;
+    margin-top: 5px;
+}
+
+.stock{
+    stroke: #000;
+}
+.dark-icon{
+    stroke:white !important;
+}
+
+.status{
+    padding:6px 14px;
+    border-radius:20px;
+    width:max-content;
+    font-size:15px;
+}
+.edit-del{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ri-edit-line{
+    font-size: 22px;
+    color: #2563eb;
+}
+.ri-delete-bin-line{
+    font-size: 22px;
+    color: red;
+}
+.todo{
+    background:#dbeafe;
+    color:#2563eb;
+}
+.progress{
+    color:#ea580c;      
+    background:#ffedd5; 
+}
+.completed{
+    color:#16a34a;  
+    background:#dcfce7; 
+}
+
+.completed-icon{
+    appearance:none;
+    -webkit-appearance:none;
+
+    height:20px;
+    width:20px;
+
+    border-radius:50%;
+    cursor:pointer;
+
+    border:2px solid #16a34a;
+    background:#dcfce7;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:13px;
+}
+
+.addTask{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,0.45);
+    justify-content:center;
+    align-items:center;
+}
+
+.addTask-box{
+
+    background:white;
+
+    width:450px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+
+}
+
+.addTask-box h2{
+
+    margin-bottom:25px;
+
+}
+
+.addTask-box label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+
+
+.addTask-box input,
+.addTask-box textarea,
+.addTask-box select{
+
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #dbe2ea;
+
+    border-radius:10px;
+
+    outline:none;
+
+
+}
+
+
+
+textarea{
+
+    height:80px;
+
+    resize:none;
+
+}
+
+
+.buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+.cancel{
+
+    background:white;
+
+    border:1px solid #cbd5e1;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+}
+
+
+
+.save{
+
+    background:#4f46e5;
+
+    color:white;
+    padding:12px 22px;
+
+    border-radius:10px;
+
+}
+.cancel:hover{
+color:#c2410c;
+background:#ffedd5;
+}
+.browser{
+    
+    background:#4f46e5;
+
+    color:white;
+    padding:12px 15px;
+
+    border-radius:10px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 79%;
+    cursor: pointer;
+}
+
+.pipeline-section {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    display: none;
+}
+
+[data-pipeline] {
+    background: #242424;
+    color: #f5f5f5;
+    border: 1px solid #eff1f363;
+}
+
+.pipeline-section h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #475569;
+}
+
+[data-pipeline] h2 {
+    color: #f5f5f5;
+}
+
+.pipeline-flows {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.flow-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Base Box Style */
+.box {
+    background: #ede9fe;
+    color: #4f46e5;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #c4b5fd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+[data-pipeline] .box {
+    background: #333333;
+    color: #a78bfa;
+    border-color: #555;
+}
+
+/* Highlight Box for Render Tree */
+.box.highlight {
+    background: #dcfce7;
+    color: #16a34a;
+    border-color: #86efac;
+}
+
+[data-pipeline] .box.highlight {
+    background: #14532d;
+    color: #86efac;
+    border-color: #166534;
+}
+
+/* Arrow Styling */
+.flow-row i {
+    font-size: 28px;
+    color: #64748b;
+}
+
+[data-pipeline] .flow-row i {
+    color: #94a3b8;
+}

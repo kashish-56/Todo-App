@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    
+    <div class="app " >
+      <!-- Sidebar -->
+       
+      <aside class="sidebar" data-themeSidebar >
+        <h2>
+          <img src="assets/logo.png" alt="Logo" class="logo" data-themeSidebarImg/>
+        </h2>
+
+        <div class="menu active" data-themeMenu>
+          <img src="assets/calender.png" alt="Logo" class="logo" />
+          <p>All Tasks</p>
+          <span class="one">4</span>
+        </div>
+
+        <div class="menu" data-themeMenu>
+          <i class="ri-checkbox-blank-circle-line"></i> 
+          <p>To Do</p>
+          <span class="two">9</span>
+        </div>
+
+        <div class="menu" data-themeMenu>
+          <i class="ri-timer-2-line"></i>
+          <p>In Progress</p>
+    
+          <span class="three"></span>
+        </div>
+
+        <div class="menu" data-themeMenu>
+          <i class="ri-checkbox-circle-line"></i>
+          <p>Completed</p>
+          <span class="four"></span>
+        </div>
+
+        <hr data-hr />
+
+        <!-- <div class="menu"><i class="ri-information-line"></i> About</div> -->
+
+        <div class="image">
+          <img src="assets/photo.png" />
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main" data-main>
+        <div class="header">
+          <h1>All Tasks</h1>
+
+          <div><button class="addBtn">
+            <i class="ri-add-large-line"></i>  Add Task
+          </button>
+          <button class="light">☀️ Light Mode</button></div>
+        </div>
+
+        <!-- Search -->
+        <div class="search-div">
+          <div class="input">
+          <i class="ri-search-line"></i>
+          <input class="search" data-search placeholder="Search tasks..." />
+        </div>
+        <button class="clear-all">Clear All</button>
+        </div>
+
+        <!-- Task Table -->
+
+        <div class="task-box" data-task>
+          <div class="row heading " data-heading>
+            <p>Task</p>
+            <p>Status</p>
+            <p>Due Date</p>
+            <p>Actions</p>
+          </div>
+
+          <!-- Task 1 -->
+
+          <div id="taskContainer">
+            
+          </div>
+        </div>
+
+        <button class="browser">Show Browser Rendering</button>
+
+        <div class="pipeline-section" data-pipeline>
+          <h2>Browser Rendering Pipeline</h2>
+          
+          <div class="pipeline-flows">
+            <div class="flow-row">
+              <div class="box">HTML</div>
+              <i class="ri-arrow-right-line"></i>
+              <div class="box">Parsing</div>
+              <i class="ri-arrow-right-line"></i>
+              <div class="box">Tokenization</div>
+              <i class="ri-arrow-right-line"></i>
+              <div class="box">DOM Tree</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="box">CSS</div>
+              <i class="ri-arrow-right-line"></i>
+              <div class="box">CSSOM Tree</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="box">DOM Tree <br><small style="color: inherit;">+</small><br> CSSOM Tree</div>
+              <i class="ri-arrow-right-line"></i>
+              <div class="box highlight">Render Tree</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+
+    <form>
+      <div class="addTask" id="addTask">
+      <div class="addTask-box">
+        <h2>Add New Task</h2>
+
+        <label> Task Title </label>
+
+        <input id="title" placeholder="Enter task title..." />
+
+        <label > Description </label>
+
+        <textarea placeholder="Enter description..."></textarea>
+
+        <label> Status </label>
+
+       <select id="status">
+
+    <option value="todo">🔵  To Do</option>
+
+    <option value="progress">🟠  In Progress</option>
+
+    <option value="completed">🟢  Completed</option>
+
+</select>
+
+        <label> Due Date </label>
+
+        <input type="date" id="date" />
+
+        <div class="buttons">
+          <button class="cancel">Cancel</button>
+
+          <button class="save">Add Task</button>
+        </div>
+      </div>
+    </div>
+    </form>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
